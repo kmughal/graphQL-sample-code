@@ -4,7 +4,7 @@ const _ = require('lodash');
 const orderBy = (rows, collection, field) => {
   const data = camelizeKeys(rows);
   const groupedData = _.groupBy(data, field);
-  console.log(groupedData)
+  
   return collection.map(e => {
     const item = groupedData[e];
     return item ? item : {};
